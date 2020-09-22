@@ -1,7 +1,7 @@
 # Flask Tutorial
 
 ## Overview
-Series of Tutorials on building backend servers and microsites with Flask
+Series of tutorials on building backend servers and microsites with Flask
 
 
 ## Reference
