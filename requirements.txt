@@ -1,0 +1,7 @@
+# flask server
+
+flask
+flask-wtf
+
+# export flask-app
+python-dotenv
