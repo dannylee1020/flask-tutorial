@@ -1,7 +1,8 @@
 # flask server
-
 flask
 flask-wtf
+flask-sqlalchemy
+flask-migrate
 
 # export flask-app
 python-dotenv
