@@ -1,0 +1,102 @@
+2020-10-05 13:24:25,041 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:24:44,854 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:24:48,375 ERROR: Exception on / [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 21, in index
+    posts = current_user.followed_posts().all()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
+2020-10-05 13:26:05,564 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:26:15,596 ERROR: Exception on /explore [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 144, in explore
+    posts = Post.query.order_by(Post.timestamp.desc()).all()
+NameError: name 'Post' is not defined
+2020-10-05 13:27:16,104 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:27:36,507 ERROR: Exception on /index [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 17, in index
+    db.session_add.post()
+AttributeError: 'SQLAlchemy' object has no attribute 'session_add'
+2020-10-05 13:27:56,477 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:28:03,186 ERROR: Exception on /index [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 17, in index
+    db.session.add.post()
+AttributeError: 'function' object has no attribute 'post'
+2020-10-05 13:28:32,069 ERROR: Exception on /index [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 17, in index
+    db.session.add(post)
+AttributeError: 'function' object has no attribute 'post'

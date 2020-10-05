@@ -1,0 +1,100 @@
+2020-10-05 13:28:43,838 ERROR: Exception on /index [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 17, in index
+    db.session.add(posts)
+AttributeError: 'function' object has no attribute 'post'
+2020-10-05 13:28:53,371 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:38:22,371 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:39:02,065 ERROR: Exception on /index [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 21, in index
+    page = requests.args.get('page', 1 , type=int)
+NameError: name 'requests' is not defined
+2020-10-05 13:39:05,163 ERROR: Exception on /index [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 21, in index
+    page = requests.args.get('page', 1 , type=int)
+NameError: name 'requests' is not defined
+2020-10-05 13:39:06,554 ERROR: Exception on /explore [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 146, in explore
+    page = requests.args.get('page', 1, type = int)
+NameError: name 'requests' is not defined
+2020-10-05 13:39:38,045 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+2020-10-05 13:39:51,377 ERROR: Exception on /index [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+Traceback (most recent call last):
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
+    return func(*args, **kwargs)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 22, in index
+    posts = current_user.followed_posts().paginate(
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/werkzeug/local.py", line 347, in __getattr__
+    return getattr(self._get_current_object(), name)
+AttributeError: 'User' object has no attribute 'followed_posts'
