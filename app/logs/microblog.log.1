@@ -1,5 +1,4 @@
-2020-10-05 13:43:04,066 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
-2020-10-05 13:43:05,244 ERROR: Exception on /index [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+2020-10-06 14:02:41,175 ERROR: Exception on /reset_password_request [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -13,28 +12,27 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 24, in index
-    return render_template('index.html', title = 'Home', posts=posts, form=form)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2020-10-05 13:43:11,104 ERROR: Exception on /index [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 166, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/mail.py", line 18, in send_password_reset_email
+    text_body = render_template('email/reset_password.txt', user=user, token=token),
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 138, in render_template
+    ctx.app.jinja_env.get_or_select_template(template_name_or_list),
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 930, in get_or_select_template
+    return self.get_template(template_name_or_list, parent, globals)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 883, in get_template
+    return self._load_template(name, self.make_globals(globals))
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 857, in _load_template
+    template = self.loader.load(self, name, globals)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/loaders.py", line 115, in load
+    source, filename, uptodate = self.get_source(environment, name)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 60, in get_source
+    return self._get_source_fast(environment, template)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 89, in _get_source_fast
+    raise TemplateNotFound(template)
+jinja2.exceptions.TemplateNotFound: email/reset_password.txt
+2020-10-06 14:03:32,323 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:45]
+2020-10-06 14:03:47,373 ERROR: Exception on /reset_password_request [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -48,28 +46,32 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 24, in index
-    return render_template('index.html', title = 'Home', posts=posts, form=form)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2020-10-05 13:43:11,587 ERROR: Exception on /explore [GET] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 166, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/mail.py", line 19, in send_password_reset_email
+    html_body = render_template('mail/reset_password.html', user=user, token=token))
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/mail.py", line 10, in send_mail
+    mail.send(msg)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2020-10-06 14:08:55,636 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:45]
+2020-10-06 14:09:52,877 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:45]
+2020-10-06 14:10:15,292 ERROR: Exception on /reset_password_request [POST] [in /Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py:1892]
 Traceback (most recent call last):
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 2447, in wsgi_app
     response = self.full_dispatch_request()
@@ -83,25 +85,27 @@ Traceback (most recent call last):
     rv = self.dispatch_request()
   File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/app.py", line 1936, in dispatch_request
     return self.view_functions[rule.endpoint](**req.view_args)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_login/utils.py", line 272, in decorated_view
-    return func(*args, **kwargs)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 149, in explore
-    return render_template('index.html', title = 'Explore', posts=posts)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 140, in render_template
-    ctx.app,
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask/templating.py", line 120, in _render
-    rv = template.render(context)
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 1090, in render
-    self.environment.handle_exception()
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/environment.py", line 832, in handle_exception
-    reraise(*rewrite_traceback_stack(source=source))
-  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/jinja2/_compat.py", line 28, in reraise
-    raise value.with_traceback(tb)
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 1, in top-level template code
-    {% extends "base.html" %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/base.html", line 31, in top-level template code
-    {% block content %}{% endblock %}
-  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/templates/index.html", line 18, in block "content"
-    {% for post in posts %}
-TypeError: 'Pagination' object is not iterable
-2020-10-05 13:43:36,865 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:43]
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/routes.py", line 166, in reset_password_request
+    send_password_reset_email(user)
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/mail.py", line 19, in send_password_reset_email
+    html_body = render_template('mail/reset_password.html', user=user, token=token))
+  File "/Users/dhyungseoklee/Projects/Flask/microblog/app/mail.py", line 10, in send_mail
+    mail.send(msg)
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 491, in send
+    with self.connect() as connection:
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 144, in __enter__
+    self.host = self.configure_host()
+  File "/Users/dhyungseoklee/Projects/Flask/virtual_env/flask_env/lib/python3.7/site-packages/flask_mail.py", line 158, in configure_host
+    host = smtplib.SMTP(self.mail.server, self.mail.port)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 251, in __init__
+    (code, msg) = self.connect(host, port)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 336, in connect
+    self.sock = self._get_socket(host, port, self.timeout)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/smtplib.py", line 307, in _get_socket
+    self.source_address)
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 728, in create_connection
+    raise err
+  File "/usr/local/Cellar/python/3.7.6_1/Frameworks/Python.framework/Versions/3.7/lib/python3.7/socket.py", line 716, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 61] Connection refused
+2020-10-06 14:11:42,888 INFO: Microblog startup [in /Users/dhyungseoklee/Projects/Flask/microblog/app/__init__.py:45]
