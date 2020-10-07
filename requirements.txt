@@ -8,5 +8,8 @@ email-validator
 flask-mail
 pyjwt
 
+#styling
+flask-bootstrap
+
 # export flask-app
 python-dotenv

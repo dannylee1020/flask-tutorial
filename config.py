@@ -15,6 +15,3 @@ class Config(object):
 	ADMINS = ['admins@example.com']
 
 	POSTS_PER_PAGE = 25
-
-
-	
