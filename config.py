@@ -12,7 +12,7 @@ class Config(object):
 	MAIL_USER_TLS = os.environ.get('MAIL_USER_TLS') is not None
 	MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
 	MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
-	ADMINS = ['test@example.com']
+	ADMINS = ['admins@example.com']
 
 	POSTS_PER_PAGE = 25
 
